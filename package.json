@@ -1,0 +1,27 @@
+{
+  "name": "typesense-instantsearch-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html --port 3000",
+    "build": "parcel build index.html",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "typesenseServer": "docker run -i -p 8108:8108 -v/tmp/typesense-server-data-1c/:/data typesense/typesense:0.12.0 --data-dir /data --api-key=xyz --search-only-api-key=abcd --listen-port 8108 --enable-cors",
+    "populateTypesenseIndex": "node populateTypesenseIndex.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "eslint": "5.7.0",
+    "eslint-config-algolia": "13.2.3",
+    "eslint-config-prettier": "3.6.0",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-prettier": "3.1.2",
+    "parcel-bundler": "1.12.4",
+    "prettier": "1.19.1",
+    "typesense": "^0.4.7"
+  },
+  "dependencies": {
+    "typesense-instantsearch-adapter": "0.0.4"
+  }
+}
