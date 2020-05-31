@@ -22,6 +22,6 @@
     "typesense": "^0.4.7"
   },
   "dependencies": {
-    "typesense-instantsearch-adapter": "0.1.0"
+    "typesense-instantsearch-adapter": "0.1.1"
   }
 }
