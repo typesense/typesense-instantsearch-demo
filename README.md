@@ -2,7 +2,7 @@
 
 This is a demo that shows you a quick search interface that was built with [typesense-instantsearch-adapter](https://github.com/typesense/typesense-instantsearch-adapter).
 
-Read the accompanying walk-through here: [https://typesense.org/docs/0.12.0/guide/#search-ui](https://typesense.org/docs/0.12.0/guide/#search-ui).
+Read the accompanying walk-through here: [https://typesense.org/docs/0.13.0/guide.html#search-ui](https://typesense.org/docs/0.13.0/guide.html#search-ui).
 
 ## Get started
 
