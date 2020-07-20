@@ -3427,9 +3427,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -5528,18 +5528,26 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typesense-instantsearch-adapter@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/typesense-instantsearch-adapter/-/typesense-instantsearch-adapter-0.0.4.tgz#1ddf29133e9f88975bb1bfa724a1be76f315d7e7"
-  integrity sha512-nABcnTjBlwGr9E1bMFH6Er5GKO8jeZ5f6eU6drZgVhJ/IbpCbn5arD/DLpDpRwtBMEmd3JVi4pD8fUdeWMc/fg==
+typesense-instantsearch-adapter@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/typesense-instantsearch-adapter/-/typesense-instantsearch-adapter-0.1.3.tgz#45e413581d36ba3a5bf57d0cca487b9b65d3b6a2"
+  integrity sha512-vK5FOHN4eUn1uEvJlRfotVKP+697DxzJBXA6Vs9fp6H6Qs6WOtt6Dpz5b/xJj3Mgg7MFS/SHfURj5fw8Aj2N2Q==
   dependencies:
     he "^1.2.0"
-    typesense "^0.4.6"
+    typesense "^0.6.0"
 
-typesense@^0.4.6, typesense@^0.4.7:
+typesense@^0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/typesense/-/typesense-0.4.7.tgz#94a29e90c21b085ffde79997edae2af5305bcff1"
   integrity sha512-7xJsoxT0Z3PBBrtk3lOYmHUo4qoy3mq+58rJYS3gAL3RXSHYsCRyek0pxBw+OKWa41U4oOdUfj6LUsX+Z2hUTQ==
+  dependencies:
+    axios "^0.19.0"
+    loglevel "^1.6.8"
+
+typesense@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/typesense/-/typesense-0.6.0.tgz#f19db9dceef1eb93fd9d42ed839b8a7cdc5518a6"
+  integrity sha512-saXcZYi6LSjQcz2fFfjdXvllCu95yd6zlyZZzGIoZ63ar0HiMZCiEwPaJ+iNxKIxe3JgDjay5DtM4KvVOKD+UA==
   dependencies:
     axios "^0.19.0"
     loglevel "^1.6.8"
