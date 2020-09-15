@@ -9,12 +9,12 @@ module.exports = (async () => {
   const typesense = new Typesense.Client({
     nodes: [
       {
-        host: 'localhost',
-        port: '8108',
-        protocol: 'http',
+        host: 'jqeda7gwobunm1s4.a1.typesense.net',
+        port: '443',
+        protocol: 'https',
       },
     ],
-    apiKey: 'xyz',
+    apiKey: 'lMFa0sxyKAqsSwD59ZYxxOSutTUA5heC',
   });
 
   const schema = {
@@ -57,7 +57,7 @@ module.exports = (async () => {
     console.log(returnData);
     console.log('Done indexing.');
 
-    const failedItems = returnData.items.filter(item => item.success === false);
+    const failedItems = returnData.split("\n").filter(item => item.success === false);
     if (failedItems.length > 0) {
       throw new Error(
         `Error indexing items ${JSON.stringify(failedItems, null, 2)}`,
