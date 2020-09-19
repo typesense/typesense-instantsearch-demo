@@ -18,27 +18,27 @@ module.exports = (async () => {
   });
 
   const schema = {
-      'name': 'books',
-      'fields': [
-        { 'name': 'title', 'type': 'string' },
-        { 'name': 'authors', 'type': 'string[]' },
-        { 'name': 'image_url', 'type': 'string' },
+    name: 'books',
+    fields: [
+      { name: 'title', type: 'string' },
+      { name: 'authors', type: 'string[]' },
+      { name: 'image_url', type: 'string' },
 
-        { 'name': 'publication_year', 'type': 'int32' },
-        { 'name': 'ratings_count', 'type': 'int32' },
-        { 'name': 'average_rating', 'type': 'float' },
+      { name: 'publication_year', type: 'int32' },
+      { name: 'ratings_count', type: 'int32' },
+      { name: 'average_rating', type: 'float' },
 
-        { 'name': 'authors_facet', 'type': 'string[]', 'facet': true },
-        { 'name': 'publication_year_facet', 'type': 'string', 'facet': true },
-      ],
-      'default_sorting_field': 'ratings_count',
-    };
+      { name: 'authors_facet', type: 'string[]', facet: true },
+      { name: 'publication_year_facet', type: 'string', facet: true },
+    ],
+    default_sorting_field: 'ratings_count',
+  };
 
   console.log('Populating index in Typesense');
 
   try {
-    await typesense.collections("books").delete();
-    console.log("Deleting existing collection: books")
+    await typesense.collections('books').delete();
+    console.log('Deleting existing collection: books');
   } catch (error) {
     // Do nothing
   }
@@ -48,7 +48,7 @@ module.exports = (async () => {
   await typesense.collections().create(schema);
 
   console.log('Adding records: ');
-  const books = require('./data/books.json')
+  const books = require('./data/books.json');
   try {
     const returnData = await typesense
       .collections('books')
@@ -57,10 +57,10 @@ module.exports = (async () => {
     console.log(returnData);
     console.log('Done indexing.');
 
-    const failedItems = returnData.items.filter(item => item.success === false);
+    const failedItems = returnData.filter(item => item.success === false);
     if (failedItems.length > 0) {
       throw new Error(
-        `Error indexing items ${JSON.stringify(failedItems, null, 2)}`,
+        `Error indexing items ${JSON.stringify(failedItems, null, 2)}`
       );
     }
 
