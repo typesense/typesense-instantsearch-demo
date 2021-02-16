@@ -53,7 +53,7 @@ module.exports = (async () => {
     const returnData = await typesense
       .collections('books')
       .documents()
-      .createMany(books);
+      .import(books);
     console.log(returnData);
     console.log('Done indexing.');
 
