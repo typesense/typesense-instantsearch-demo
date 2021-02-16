@@ -16,6 +16,7 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   // The following parameters are directly passed to Typesense's search API endpoint.
   //  So you can pass any parameters supported by the search endpoint below.
   //  queryBy is required.
+  //  filterBy is managed and overridden by InstantSearch.js. To set it, you want to use one of the filter widgets like refinementList or use the `configure` widget.
   additionalSearchParameters: {
     queryBy: 'title,authors',
   },
