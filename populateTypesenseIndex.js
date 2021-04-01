@@ -21,15 +21,10 @@ module.exports = (async () => {
     name: 'books',
     fields: [
       { name: 'title', type: 'string' },
-      { name: 'authors', type: 'string[]' },
-      { name: 'image_url', type: 'string' },
-
-      { name: 'publication_year', type: 'int32' },
+      { name: 'authors', type: 'string[]', facet: true },
+      { name: 'publication_year', type: 'int32', facet: true },
       { name: 'ratings_count', type: 'int32' },
-      { name: 'average_rating', type: 'float' },
-
-      { name: 'authors_facet', type: 'string[]', facet: true },
-      { name: 'publication_year_facet', type: 'string', facet: true },
+      { name: 'average_rating', type: 'float',  facet: true },
     ],
     default_sorting_field: 'ratings_count',
   };
