@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.0.0-beta.2",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
     "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "babel-eslint": "10.0.3",
     "eslint": "5.7.0",

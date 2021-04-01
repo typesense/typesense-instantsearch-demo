@@ -1,4 +1,4 @@
-/* global algoliasearch instantsearch */
+/* global instantsearch */
 
 import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
 
@@ -32,20 +32,23 @@ search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
   }),
+  instantsearch.widgets.configure({
+    hitsPerPage: 8,
+  }),
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
       item: `
         <div>
-          <img src="{{image_url}}" align="left" alt="{{name}}" />
+          <img src="{{image_url}}" alt="{{name}}" height="100" />
           <div class="hit-name">
             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
           </div>
-          <div class="hit-description">
-            {{#helpers.highlight}}{ "attribute": "authors" }{{/helpers.highlight}}
+          <div class="hit-authors">
+            {{ authors }}
           </div>
-          <div class="hit-price">\${{publication_year}}</div>
-          <div class="hit-rating">Rating: {{average_rating}}</div>
+          <div class="hit-publication-year">{{publication_year}}</div>
+          <div class="hit-rating">{{average_rating}}/5 rating</div>
         </div>
       `,
     },

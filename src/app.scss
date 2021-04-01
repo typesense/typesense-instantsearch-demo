@@ -58,3 +58,31 @@
   margin: 2rem auto;
   text-align: center;
 }
+
+.hit-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hit-authors {
+  margin-top: 3px;
+  font-size: 0.8rem;
+}
+
+.hit-publication-year {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+.hit-rating {
+  margin-top: 3px;
+  font-size: 0.8rem;
+}
+
+
+.ais-Hits-item {
+  padding: 30px;
+  box-shadow: none;
+  border: 1px solid lighten(lightgray, 8%);
+}
