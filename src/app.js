@@ -38,19 +38,21 @@ search.addWidgets([
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
-      item: `
+      item(item) {
+        return `
         <div>
-          <img src="{{image_url}}" alt="{{name}}" height="100" />
+          <img src="${item.image_url}" alt="${item.name}" height="100" />
           <div class="hit-name">
-            {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+            ${item._highlightResult.title.value}
           </div>
           <div class="hit-authors">
-            {{ authors }}
+          ${item._highlightResult.authors.map(a => a.value).join(', ')}
           </div>
-          <div class="hit-publication-year">{{publication_year}}</div>
-          <div class="hit-rating">{{average_rating}}/5 rating</div>
+          <div class="hit-publication-year">${item.publication_year}</div>
+          <div class="hit-rating">${item.average_rating}/5 rating</div>
         </div>
-      `,
+      `;
+      },
     },
   }),
   instantsearch.widgets.pagination({

@@ -11,18 +11,17 @@
     "populateTypesenseIndex": "node populateTypesenseIndex.js"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.3",
-    "eslint": "5.7.0",
-    "eslint-config-algolia": "13.2.3",
-    "eslint-config-prettier": "3.6.0",
-    "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-prettier": "3.1.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.30.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-prettier": "3.4.0",
     "parcel-bundler": "^1.12.5",
-    "prettier": "1.19.1",
-    "sass": "^1.32.12",
-    "typesense": "^0.11.1"
+    "prettier": "2.3.2",
+    "sass": "^1.35.2",
+    "typesense": "^0.13.0"
   },
   "dependencies": {
-    "typesense-instantsearch-adapter": "^1.0.0"
+    "typesense-instantsearch-adapter": "^1.2.2"
   }
 }
