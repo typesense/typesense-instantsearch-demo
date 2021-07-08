@@ -22,9 +22,15 @@ module.exports = (async () => {
     fields: [
       { name: 'title', type: 'string' },
       { name: 'authors', type: 'string[]', facet: true },
+
       { name: 'publication_year', type: 'int32', facet: true },
       { name: 'ratings_count', type: 'int32' },
-      { name: 'average_rating', type: 'float',  facet: true },
+      { name: 'average_rating', type: 'float', facet: true }
+
+      // Only fields that need to be searched / filtered by need to be specified in the collection's schema
+      // The documents you index can still contain other additional fields.
+      //  These fields not mentioned in the schema, will be returned as is as part of the search results.
+      // { name: 'image_url', type: 'string' },
     ],
     default_sorting_field: 'ratings_count',
   };
