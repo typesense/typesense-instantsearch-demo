@@ -46,7 +46,7 @@ search.addWidgets([
             ${item._highlightResult.title.value}
           </div>
           <div class="hit-authors">
-          ${item._highlightResult.authors.map(a => a.value).join(', ')}
+          ${item._highlightResult.authors.map((a) => a.value).join(', ')}
           </div>
           <div class="hit-publication-year">${item.publication_year}</div>
           <div class="hit-rating">${item.average_rating}/5 rating</div>

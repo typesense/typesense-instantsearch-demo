@@ -7,7 +7,7 @@
     "build": "parcel build index.html",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "typesenseServer": "docker run -i -p 8108:8108 -v/tmp/typesense-server-data-1c/:/data typesense/typesense:0.22.2 --data-dir /data --api-key=xyz --listen-port 8108 --enable-cors",
+    "typesenseServer": "docker run -i -p 8108:8108 -v/tmp/typesense-server-data-1c/:/data typesense/typesense:0.23.1 --data-dir /data --api-key=xyz --listen-port 8108 --enable-cors",
     "populateTypesenseIndex": "node populateTypesenseIndex.js"
   },
   "devDependencies": {
@@ -19,9 +19,9 @@
     "parcel-bundler": "^1.12.5",
     "prettier": "2.3.2",
     "sass": "^1.35.2",
-    "typesense": "^0.13.0"
+    "typesense": "^1.5.0-0"
   },
   "dependencies": {
-    "typesense-instantsearch-adapter": "^1.2.2"
+    "typesense-instantsearch-adapter": "^2.4.2-1"
   }
 }
