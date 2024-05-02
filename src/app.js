@@ -1,15 +1,15 @@
 /* global instantsearch */
 
-import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
+import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
-    apiKey: 'xyz', // Be sure to use an API key that only allows searches, in production
+    apiKey: "xyz", // Be sure to use an API key that only allows searches, in production
     nodes: [
       {
-        host: 'localhost',
-        port: '8108',
-        protocol: 'http',
+        host: "localhost",
+        port: "8108",
+        protocol: "http",
       },
     ],
   },
@@ -18,25 +18,25 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   //  queryBy is required.
   //  filterBy is managed and overridden by InstantSearch.js. To set it, you want to use one of the filter widgets like refinementList or use the `configure` widget.
   additionalSearchParameters: {
-    queryBy: 'title,authors',
+    queryBy: "title,authors",
   },
 });
-const searchClient = typesenseInstantsearchAdapter.searchClient;
+const { searchClient } = typesenseInstantsearchAdapter;
 
 const search = instantsearch({
   searchClient,
-  indexName: 'books',
+  indexName: "books",
 });
 
 search.addWidgets([
   instantsearch.widgets.searchBox({
-    container: '#searchbox',
+    container: "#searchbox",
   }),
   instantsearch.widgets.configure({
     hitsPerPage: 8,
   }),
   instantsearch.widgets.hits({
-    container: '#hits',
+    container: "#hits",
     templates: {
       item(item) {
         return `
@@ -46,7 +46,7 @@ search.addWidgets([
             ${item._highlightResult.title.value}
           </div>
           <div class="hit-authors">
-          ${item._highlightResult.authors.map((a) => a.value).join(', ')}
+          ${item._highlightResult.authors.map((a) => a.value).join(", ")}
           </div>
           <div class="hit-publication-year">${item.publication_year}</div>
           <div class="hit-rating">${item.average_rating}/5 rating</div>
@@ -56,7 +56,7 @@ search.addWidgets([
     },
   }),
   instantsearch.widgets.pagination({
-    container: '#pagination',
+    container: "#pagination",
   }),
 ]);
 

@@ -8,7 +8,7 @@ Here are more live demos that use the Instantsearch adapter: [https://typesense.
 
 ## Get started
 
-To run this project locally, install the dependencies, start Typesense Server, populate the index and run the app server:
+To run this project locally, install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/), start Typesense Server, populate the index and run the app server:
 
 ```sh
 $ npm install

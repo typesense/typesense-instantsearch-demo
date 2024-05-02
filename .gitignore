@@ -24,3 +24,4 @@ yarn-error.log*
 .parcel-cache
 
 typesense-server-data-*
+typesense-data
